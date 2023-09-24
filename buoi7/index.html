@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1></h1>
+    <div id="data">
+        
+    </div>
+    <script>
+        const fetchData = async () => {
+            try{
+                const respone = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+                const data = await respone.json();
+                console.log(data)
+
+                let userID = document.createElement('h2');
+                let title = document.createElement('h2');
+                let completeTask = document.createElement('h2');
+
+                userID.textContent = 'User ID:' + data.userID;
+                title.textContent = 'Task Title:' + data.title;
+                completeTask.textContent = 'Completed' + (data.complete ? 'Yes' : 'No');
+
+                const dataElement = document.getElementById('data');
+
+                dataElement.appendChild(userID);
+
+                dataElement.appendChild(userID);
+                dataElement.appendChild(title);
+                dataElement.appendChild(completeTask);
+            }
+            catch(e){
+                console.error('Error:', error);
+            }
+        }
+        fetchData() 
+    </script> -->
+
+    <!-- ============================================================== -->
+
+    <script>
+        const fetchData = async () => {
+            try {
+            const respone = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+            const data = await respone.json();
+            console.log(data)
+
+            let userID = document.createElement('h2');
+            let id = document.createElement('h2');
+            let title = document.createElement('h2');
+            let body = document.createElement('h2');
+
+            userID.textContent = 'User ID:' + date.userID
+            id.textContent = 'id:' + date.id
+            title.textContent = 'Title' + date.title
+            body.textContent = 'body' + date.body
+
+            const dataElement = document.getElementById('data');
+
+            dataElement.appendChild(userID);
+            dataElement.appendChild(id);
+            dataElement.appendChild(title);
+            dataElement.appendChild(body);
+            }
+            catch(e){
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
