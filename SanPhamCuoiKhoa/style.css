@@ -1,0 +1,55 @@
+body {
+ margin: 0;
+}   
+
+#grad1 {
+    margin-top: -68px;
+    height: 1880px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(155, 241, 144));
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 0;
+    width: 20%;
+    background-color: #c5ff8f;
+    position: fixed;
+    height: 414px;
+    overflow: auto;
+    border: solid;
+    border-radius: 12px;
+    border-color: #07e292;
+    border-right: solid #9ffddb;
+    box-shadow: 0px 0px 15px currentcolor;
+    margin-top: 40px;
+  }
+  
+  li a {
+    display: block;
+    color: #0066ff;
+    padding: 45px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-shadow: 5px 10px 10px rgb(0, 0, 0);
+  }
+
+.text {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    color: #7bff00;
+    animation-name: textchange;
+    animation-duration: 8s;
+    animation-iteration-count: 2;
+    text-shadow: 5px 0px 15px pink;
+}
+
+@keyframes textchange {
+    from {color: rgba(0, 38, 255, 0.74);}
+    to {color: #7bff00;}
+  }
