@@ -1,0 +1,80 @@
+.body {
+ background-color: rgba(0, 0, 0, 0.192);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.m8 {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 150px;
+    height: 150px;
+    width: 350px;
+    margin-top: 15%;
+    box-shadow: 0px 0px 15px black;
+}
+
+.text_m8 {
+    margin-top: -250px;
+    font-size: 90px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.m7 {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.login_form {
+    font-size: 20px;
+    width: 505px;
+    height: 55px;
+    margin-left: -23%;
+    margin-bottom: 80px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.pass_form {
+    font-size: 20px;
+    width: 505px;
+    height: 55px;
+    margin-left: -23%;
+    margin-bottom: 80px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.submit_btn {
+    font-size: 20px;
+    width: 205px;
+    height: 65px;
+    border: none;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.submit_btn:hover {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: grey;;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+

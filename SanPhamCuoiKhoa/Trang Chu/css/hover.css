@@ -50,12 +50,14 @@ li a.active {
     width: 380px;
   }
   .hover_btn4 {
-    width: 100px;
+    width: 105px;
     height: 100px;
     transition: width 2.3s;
     transition-delay: 0.2s;
+    overflow: hidden;
   }
   
   .hover_btn4:hover {
     width: 380px;
   }
+
