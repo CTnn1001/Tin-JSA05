@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lg_Rg</title>
+    <link rel="stylesheet" href="lg_rg.css">
+    <link rel="stylesheet" href="color_border.css">
+</head>
+<body>
+    <div class="main">
+        <div class="m8">
+            <span id="toggle-password" class="toggle-password">👁️</span>
+            <h1 class="text_m8" style="white-space: nowrap; margin-left: -40px;">Đăng Nhập</h1>
+            <form id="login-form">
+                <div class="m7">
+                    <form id="login-form">
+                        <input type="text" name="login" id="login-username" placeholder="Tên Đăng Nhập" class="login_form" > <br>
+                        <input type="password" name="pass" id="login-password" placeholder="Mật khẩu" class="pass_form"> <br>
+                        <div id="errorText"></div>
+                        <input type="submit" name="submit" id="submit" class="submit_btn"> <br>
+                        <span class="change-reg">
+                            Chưa có tài khoản?
+                        </span>
+                    </form>
+                </div>
+                <script>
+                    const passwordField = document.getElementById('login-password');
+                    const togglePasswordButton = document.getElementById('toggle-password');
+                
+                    let isPasswordVisible = false;
+                
+                    togglePasswordButton.addEventListener('click', function () {
+                        isPasswordVisible = !isPasswordVisible;
+                        if (isPasswordVisible) {
+                            passwordField.type = 'text'; 
+                            togglePasswordButton.textContent = '🔒';
+                        } else {
+                            passwordField.type = 'password'; 
+                            togglePasswordButton.textContent = '👁️';
+                        }
+                    });
+                </script>                
+            </form>
+        </div>
+    </div>
+    <!-- Kiểm tra khung trống -->
+    <script>
+        var usernameInput = document.getElementById("login-username");
+        var passwordInput = document.getElementById("login-password");
+        var errorText = document.getElementById("errorText");
+    
+        usernameInput.addEventListener("blur", validateInput);
+        passwordInput.addEventListener("blur", validateInput);
+    
+        function validateInput() {
+            if (usernameInput.value === "") {
+                usernameInput.classList.add("error");
+            } else {
+                usernameInput.classList.remove("error");
+            }
+            if (passwordInput.value === "") {
+                passwordInput.classList.add("error");
+            } else {
+                passwordInput.classList.remove("error");
+            }
+        }
+    
+        usernameInput.addEventListener("input", checkInputValue);
+        passwordInput.addEventListener("input", checkInputValue);
+    
+        function checkInputValue(event) {
+            var input = event.target;
+            if (input.value.trim() === "") {
+                input.classList.remove("has-value");
+            } else {
+                input.classList.add("has-value");
+            }
+        }
+        // Chặn tiếng Việt
+        usernameInput.addEventListener("input", removeVietnameseAccents);
+        passwordInput.addEventListener("input", removeVietnameseAccents);
+
+        function removeVietnameseAccents(event) {
+            var input = event.target;
+            var valueWithoutAccents = removeAccents(input.value);
+            if (input.value !== valueWithoutAccents) {
+                input.value = valueWithoutAccents;
+            }
+        }
+
+        function removeAccents(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+        }
+    </script>
+    
+    
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

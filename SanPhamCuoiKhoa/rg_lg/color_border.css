@@ -1,0 +1,14 @@
+.login_form.error,
+.pass_form.error {
+    border: 2.5px solid rgb(219, 84, 84); 
+}
+
+.login_form.has-value,
+.pass_form.has-value {
+    border: 2.5px solid rgb(140, 235, 140); 
+}
+
+.login_form,
+.pass_form {
+    border: 1px solid #ccc; 
+}

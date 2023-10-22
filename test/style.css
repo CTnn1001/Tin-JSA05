@@ -1,0 +1,29 @@
+/* styles.css */
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cart-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buy-button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}

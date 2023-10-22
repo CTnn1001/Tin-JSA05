@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Danh sách sản phẩm</h1>
+    <div class="product">
+        <h2>Sản phẩm 1</h2>
+        <button class="buy-button" onclick="addToCart('Product 1', 1)">Mua ngay</button>
+        <button class="cart-button" onclick="addToCart('Product 1', prompt('Nhập số lượng', 1))">Thêm vào giỏ hàng</button>
+    </div>
+    <div class="product">
+        <h2>Sản phẩm 2</h2>
+        <button class="buy-button" onclick="addToCart('Product 2', 1)">Mua ngay</button>
+        <button class="cart-button" onclick="addToCart('Product 2', prompt('Nhập số lượng', 1))">Thêm vào giỏ hàng</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

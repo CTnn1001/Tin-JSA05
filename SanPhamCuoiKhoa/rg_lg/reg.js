@@ -1,1 +1,0 @@
-const registerRg = document.getElementById('reg')

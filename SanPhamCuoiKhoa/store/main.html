@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="info-fr">
+        <div class="info">
+            <h1>🌟 Minecraft 🌟</h1>
+        </div>
+        <div class="text-p">
+            <p>Ban Cac San Pham Ve Mc</p>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="pro">
+            <div class="f-menu">
+                <p class="hide">🔨Plugins🔨
+                    <div class="content">
+                        <span><a href="index.html" class="hv" style="cursor: pointer; text-decoration: none;">📝 Plugins Viet Hoa</a></span> 
+                        <span><a href="">1</a></span> 
+                        <span><a href=""></a></span> <br>
+                    </div>
+                </p>
+                <p class="hide">🖥️Server🖥️
+                    <div class="content">
+                        <span><a href="setup.html" class="hv" style="cursor: pointer; text-decoration: none;">👾 Set Up</a></span> <br>
+                        <span><a href="">2</a></span> <br>
+                        <span><a href="">3</a></span> <br>
+                    </div>
+                </p>
+                <p class="hide">💦Texture💦
+                    <div class="content">
+                        <span><a href="index.html" class="hv" style="cursor: pointer; text-decoration: none;">None</a></span> <br>
+                        <span><a href="">2</a></span> <br>
+                        <span><a href="">3</a></span> <br>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- An The -->
+    <script>
+        document.querySelector('.hide').addEventListener('click', function() {
+            var content = document.querySelector('.content')
+            if (content.style.display == 'none' || content.style.display == '') {
+                content.style.display = 'block'
+            }
+            else {
+                content.style.display = 'none'
+            }
+        })
+    </script>
+    <!-- <div class="main-center">
+        <div class="container">
+            <div class="main-item" onclick="toggleSubItems('plugin')">Plugin</div>
+            <div class="sub-item" id="plugin">
+                <ul class="text-frame">
+                    <li class="text-frame"><a href="index.html" style="text-decoration: none; color: rgb(0, 0, 0);">Plugin Việt Hóa</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="main-item" onclick="toggleSubItems('server')">Server</div>
+            <div class="sub-item" id="server">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="main-item" onclick="toggleSubItems('resourcePack')">Resource Pack</div>
+            <div class="sub-item" id="resourcePack">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <div class="nav-bar">
+        <div class="navbar">
+            <a href="main.html">Trang chủ</a>
+            <a href="#">Liên hệ</a>
+            <a href="cart.html">Xem Giỏ Hàng</a>
+        </div>
+    </div>
+</body>
+</html>
