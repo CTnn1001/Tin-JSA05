@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(206, 170, 170);
+    background-color: grey;
+}
+
+#form {
+    margin-top: 90px;
 }
 
 .main {
@@ -17,7 +21,6 @@ body {
     margin: 10px;
     width: 600px;
     height: 500px;
-    display: inline-block;
     background-color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
@@ -86,6 +89,8 @@ li {
     text-align: center;
     padding: 14px 56px; 
     text-decoration: none; 
+    position: relative;
+    left: 200px;
 
 }
 
@@ -99,4 +104,28 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.nav-c {
+    position: relative;
+    left: 200px;
+}
+
+.find-bar {
+    margin-top: 90px;
+    margin-left: 20px;
+    position: fixed;
+    border-style: none;
+}
+
+.find {
+    width: 220px;
+    height: 45px;
+    border-radius: 15px;
+    border-style: none;
+    border-style: none;box-shadow: 5px 15px 10px currentcolor;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: black;
 }

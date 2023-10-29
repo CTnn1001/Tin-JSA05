@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #7fa789;
+    background-color: whitesmoke;
 }
 
 /* .container {
@@ -58,6 +58,8 @@ body {
     text-align: center;
     padding: 14px 56px; 
     text-decoration: none; 
+    position: relative;
+    left: 200px;
 
 }
 
@@ -71,6 +73,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.nav-c {
+    position: relative;
+    left: 200px;
 }
 
 .main-center {
@@ -122,11 +130,13 @@ body {
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
+    
 }
 
 .f-menu {
     font-size: 45px;
     cursor: pointer;
+    
 }
 
 .hide {
@@ -152,7 +162,7 @@ body {
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    
+    display: none;
 }
 
 .hv {
@@ -169,3 +179,4 @@ body {
     background: skyblue;
     
 }
+

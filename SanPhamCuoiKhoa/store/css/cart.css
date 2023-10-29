@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(177, 177, 241);
+    background-color: whitesmoke;
 }
 
 .cart {
@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 30px;
-    background-color: beige;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 

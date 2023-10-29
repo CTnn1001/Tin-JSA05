@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lg_Rg</title>
-    <link rel="stylesheet" href="lg_rg.css">
-    <link rel="stylesheet" href="color_border.css">
+    <link rel="stylesheet" href="css/lg_rg.css">
+    <link rel="stylesheet" href="css/color_border.css">
 </head>
 <body>
+
+    <div class="nav-bar">
+        <div class="navbar">
+            <a href="main.html">Trang chủ</a>
+            <a href="#">Liên hệ</a>
+            <a href="cart.html">Xem Giỏ Hàng</a>
+            <div class="nav-c">
+                <a href="lg.html">Đăng Nhập</a>
+                <a href="register.html">Đăng Kí</a>
+            </div>
+        </div>
+    </div>
+
     <div class="main">
         <div class="m8">
             <span id="toggle-password" class="toggle-password">👁️</span>
-            <h1 class="text_m8" style="white-space: nowrap; margin-left: -40px;">Đăng Nhập</h1>
+            <h1 class="text_m8" style="white-space: nowrap; margin-left: -40px;">Đăng Kí</h1>
             <form id="login-form">
                 <div class="m7">
-                    <form id="login-form">
-                        <input type="text" name="login" id="login-username" placeholder="Tên Đăng Nhập" class="login_form" > <br>
-                        <input type="password" name="pass" id="login-password" placeholder="Mật khẩu" class="pass_form"> <br>
+                    <form id="reg-form">
+                        <input type="text" name="register" id="register-username" placeholder="Tên Đăng Ký" class="login_form"> <br>
+                        <input type="password" name="pass" id="register-password" placeholder="Mật khẩu" class="pass_form"> <br>
                         <div id="errorText"></div>
-                        <input type="submit" name="submit" id="submit" class="submit_btn"> <br>
+                        <input type="submit" name="submit" id="submit" class="submit_btn">
                         <span class="change-reg">
-                            Chưa có tài khoản?
+                            Đăng Nhập
                         </span>
                     </form>
                 </div>
@@ -46,8 +59,8 @@
     </div>
     <!-- Kiểm tra khung trống -->
     <script>
-        var usernameInput = document.getElementById("login-username");
-        var passwordInput = document.getElementById("login-password");
+        var usernameInput = document.getElementById("register-username");
+        var passwordInput = document.getElementById("register-password");
         var errorText = document.getElementById("errorText");
     
         usernameInput.addEventListener("blur", validateInput);
@@ -77,7 +90,7 @@
                 input.classList.add("has-value");
             }
         }
-        // Chặn tiếng Việt
+        // Chặn tiếng dấu
         usernameInput.addEventListener("input", removeVietnameseAccents);
         passwordInput.addEventListener("input", removeVietnameseAccents);
 
@@ -93,11 +106,6 @@
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
         }
     </script>
-    
-    
-    
-    
-
     <script src="script.js"></script>
 </body>
 </html>

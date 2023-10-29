@@ -45,3 +45,5 @@ function removeItemFromCart(itemToRemove) {
 }
 
 updateCart();
+
+
