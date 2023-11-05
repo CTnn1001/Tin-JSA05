@@ -25,20 +25,19 @@
         <div class="m8">
             <span id="toggle-password" class="toggle-password">👁️</span>
             <h1 class="text_m8" style="white-space: nowrap; margin-left: -40px;">Đăng Nhập</h1>
-            <form id="login-form">
                 <div class="m7">
-                    <form id="login-form">
-                        <input type="text" name="login" id="login-username" placeholder="Tên Đăng Nhập" class="login_form" > <br>
-                        <input type="password" name="pass" id="login-password" placeholder="Mật khẩu" class="pass_form"> <br>
+                    <form onsubmit="log()">
+                        <input type="text" name="login" id="username" placeholder="Tên Đăng Nhập" class="login_form" > <br>
+                        <input type="password" name="pass" id="password" placeholder="Mật khẩu" class="pass_form"> <br>
                         <div id="errorText"></div>
-                        <input type="submit" name="submit" id="submit" class="submit_btn"> <br>
+                        <input type="submit" class="submit_btn"> <br>
                         <span class="change-reg">
-                            Chưa có tài khoản?
+                            <a href="register.html">Chưa có tài khoản?</a>
                         </span>
                     </form>
                 </div>
                 <script>
-                    const passwordField = document.getElementById('login-password');
+                    const passwordField = document.getElementById('password');
                     const togglePasswordButton = document.getElementById('toggle-password');
                 
                     let isPasswordVisible = false;
@@ -54,13 +53,12 @@
                         }
                     });
                 </script>                
-            </form>
         </div>
     </div>
     <!-- Kiểm tra khung trống -->
     <script>
-        var usernameInput = document.getElementById("login-username");
-        var passwordInput = document.getElementById("login-password");
+        var usernameInput = document.getElementById("username");
+        var passwordInput = document.getElementById("password");
         var errorText = document.getElementById("errorText");
     
         usernameInput.addEventListener("blur", validateInput);
@@ -106,11 +104,6 @@
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
         }
     </script>
-    
-    
-    
-    
-
     <script src="lg_rg.js"></script>
 </body>
 </html>

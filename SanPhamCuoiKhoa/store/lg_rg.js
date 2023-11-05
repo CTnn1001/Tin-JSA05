@@ -1,33 +1,40 @@
-const loginForm = document.getElementById('login-form');
-const registerForm = document.getElementById('register-form');
-const loginUsername = document.getElementById('login-username');
-const loginPassword = document.getElementById('login-password');
-const registerUsername = document.getElementById('reg-form');
-const registerPassword = document.getElementById('register-password');
+function reg(e) {
+    event.preventDefault();
+    // var email = document.getElementById('register-email').value
+    var username = document.getElementById('username').value
+    var pass = document.getElementById('password').value
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = loginUsername.value;
-    const password = loginPassword.value;
-    const storedUser = localStorage.getItem(username);
+    var user = {
+        username: username,
+        password: pass,
+    };
 
-    if (storedUser && JSON.parse(storedUser).password === password) {
-        alert('Đăng nhập thành công!');
-    } else {
-        alert('Sai tên đăng nhập hoặc mật khẩu.');
+    var json = JSON.stringify(user)
+    localStorage.setItem(username, json)
+    alert('Đã Đăng Kí!')
+}
+
+function log(e) {
+    event.preventDefault();
+
+    // var email = document.getElementById('login-email').value
+    var username = document.getElementById('username').value
+    var pass = document.getElementById('password').value
+    var hidediv = document.getElementById('nav-c')
+    var user = localStorage.getItem(username)
+    var data = JSON.parse(user)
+    console.log(data)
+
+    if(user == null) {
+        alert('Sai Tên Đăng Nhập')
     }
-});
-
-registerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = registerUsername.value;
-    const password = registerPassword.value;
-    const user = { username, password };
-
-    if (localStorage.getItem(username)) {
-        alert('Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.');
-    } else {
-        localStorage.setItem(username, JSON.stringify(user));
-        alert('Đăng ký thành công!');
+    else if (username == data.username && pass == data.password){
+        hidediv.style.display = 'none';
+        alert('Đã Đăng Nhập!')
+        window.location.assign("main.html")
+        
     }
-});
+    else{
+        alert('Sai Mật Khẩu')
+    }
+}

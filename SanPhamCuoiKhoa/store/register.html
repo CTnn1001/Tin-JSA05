@@ -25,20 +25,19 @@
         <div class="m8">
             <span id="toggle-password" class="toggle-password">👁️</span>
             <h1 class="text_m8" style="white-space: nowrap; margin-left: -40px;">Đăng Kí</h1>
-            <form id="login-form">
                 <div class="m7">
-                    <form id="reg-form">
-                        <input type="text" name="register" id="register-username" placeholder="Tên Đăng Ký" class="login_form"> <br>
-                        <input type="password" name="pass" id="register-password" placeholder="Mật khẩu" class="pass_form"> <br>
+                    <form onsubmit="reg()">
+                        <input type="text" name="register" id="username" placeholder="Tên Đăng Ký" class="login_form"> <br>
+                        <input type="password" name="pass" id="password" placeholder="Mật khẩu" class="pass_form"> <br>
                         <div id="errorText"></div>
-                        <input type="submit" name="submit" id="submit" class="submit_btn">
+                        <input type="submit" class="submit_btn">
                         <span class="change-reg">
-                            Đăng Nhập
+                            <a href="lg.html">Đăng Nhập</a>
                         </span>
                     </form>
                 </div>
                 <script>
-                    const passwordField = document.getElementById('login-password');
+                    const passwordField = document.getElementById('password');
                     const togglePasswordButton = document.getElementById('toggle-password');
                 
                     let isPasswordVisible = false;
@@ -54,13 +53,12 @@
                         }
                     });
                 </script>                
-            </form>
         </div>
     </div>
     <!-- Kiểm tra khung trống -->
     <script>
-        var usernameInput = document.getElementById("register-username");
-        var passwordInput = document.getElementById("register-password");
+        var usernameInput = document.getElementById("username");
+        var passwordInput = document.getElementById("password");
         var errorText = document.getElementById("errorText");
     
         usernameInput.addEventListener("blur", validateInput);
@@ -90,7 +88,7 @@
                 input.classList.add("has-value");
             }
         }
-        // Chặn tiếng dấu
+        // Chặn dấu
         usernameInput.addEventListener("input", removeVietnameseAccents);
         passwordInput.addEventListener("input", removeVietnameseAccents);
 
@@ -106,6 +104,6 @@
             return str.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
         }
     </script>
-    <script src="script.js"></script>
+    <script src="lg_rg.js"></script>
 </body>
 </html>

@@ -46,4 +46,9 @@ function removeItemFromCart(itemToRemove) {
 
 updateCart();
 
+var button = document.getElementById("tt")
+
+button.addEventListener("click"), function() {
+    window.location.href = "tt.html"
+}
 

@@ -13,10 +13,17 @@
         <div class="cart">
             <ul id="cart-items"></ul>
             <p>Tổng cộng:<span id="cart-total">0</span>K</p>
-            <button onclick="clearCart()"class="main">Xóa Giỏ Hàng</button>
+            <button onclick="clearCart()"class="main">Xóa Giỏ Hàng</button> <br>
+            <button class="tt" id="tt">Thanh Toán</button>
             <a href="index.html" style="text-decoration: none; color: rgb(255, 0, 0);">Trở lại Mua Sản Phẩm</a>
         </div>
     </div>
+    <script>
+        var button = document.getElementById("tt")
+        button.addEventListener("click"), function() {
+            window.location.href = "tt.html"    
+        }                  
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
